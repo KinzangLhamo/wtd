@@ -1,0 +1,35 @@
+# Ignore local system directories and files
+-1.14-windows.xml
+.VirtualBox/
+.bash_history
+.config/
+.gitconfig
+.ipython/
+.jupyter/
+.lesshst
+.packettracer
+.swt/
+.vscode/
+3D Objects/
+AppData/
+Cisco Packet Tracer 8.2.2/
+Contacts/
+Documents/
+Downloads/
+Favorites/
+GNS3/
+IntelGraphicsProfiles/
+Links/
+Music/
+NTUSER.DAT*
+OneDrive/
+Pictures/
+PycharmProjects/
+Saved Games/
+Searches/
+Videos/
+VirtualBox VMs/
+my-first-repo-copy/
+ntuser.dat.LOG1
+ntuser.dat.LOG2
+ntuser.ini
