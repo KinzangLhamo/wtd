@@ -1,0 +1,11 @@
+* {
+    color: blue;
+}
+
+p.center {
+    text-decoration: underline dashed green;
+}
+
+h3,p,h5 {
+    background:pink;
+}

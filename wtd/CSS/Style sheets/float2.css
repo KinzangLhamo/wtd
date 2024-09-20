@@ -1,0 +1,29 @@
+* {
+    box-sizing: border-box;
+}
+
+
+#div1 {
+    background-color: antiquewhite;
+    height: 50px;
+
+}
+
+#div2 {
+    background-color: purple;
+    height: 300px;
+    width: 30%;
+    float: left;
+    padding: 100px;
+    
+}
+
+#div3 {
+    background-color: pink;
+    height: 300px;
+    width: 100%;
+
+
+
+
+}
