@@ -1,23 +1,27 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <title>JavaScript</title>
-
-</head>
-
-<body>
-    <div id="output">Hello world</div>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise1</title>
+    <link rel="stylesheet" href="/javascript/bootstrap/css/bootstrap.min.css">
     
-    <button onclick="alert('hello 1');">Click Me</button>
-    <script>
+</head>
+<body>
+    <div class="container text-center p-5 mt-5 bg-secondary">
+        <h3 class="mb-5">Conditional Statements</h3>
+        <p>Click the button below to give your age to find out if you are eligible to vote!</p>
+        <button class="btn border btn-outline-dark" onclick="checkEligibility()">Click Me</button>
+        <p id="p1" class="p-5 m-5 bg-light"></p>
+    </div>
+    
 
-var a = prompt("What is you name?");
-var b = document.getElementById("output");
-b.innerHTML = "Hello " + a + " welcome to my page!";
 
-    </script>
+    <script src="/javascript/js/bootstrap.bundle.js"></script>
+    <script src="/javascript/js/bootstrap.bundle.min.js"></script>
+    <script src="/javascript/exercise.js"></script>
+
+
+    
 </body>
-
 </html>
-

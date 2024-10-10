@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Process Student Scores</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        #result {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Student Scores</h1>
+    <button onclick="processScores()">Show Processed Scores</button>
+
+    <div id="result"></div>
+
+    <script>
+        // Step 1: Create the student object based on the provided table
+        const students = {
+            Sonam: 76,
+            Pema: 61,
+            Sangay: 50,
+            Dechen: 55,
+            Lhaki: 92,
+            Karma: null,  // null value for Karma
+            Yuden: 81
+        };
+
+        // Step 2: Define the processScores function
+        function processScores() {
+            const result = [];
+            for (let name in students) {
+                const score = students[name];
+                
+                // Condition 1: Stop the loop if the score is null
+                if (score === null) {
+                    break;
+                }
+
+                // Condition 2: Skip students with scores less than 50
+                if (score < 50) {
+                    continue;
+                }
+
+                // Add valid student name and score to the result array
+                result.push(name + ": " + score);
+
+            }
+
+            // Step 3: Display the result in the HTML
+            document.getElementById('result').innerHTML = result.length > 0 
+                ? result.join('<br>') 
+                : 'No valid students found.';
+        }
+    </script>
+
+</body>
+</html>
