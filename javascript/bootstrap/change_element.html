@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change_Element</title>
+</head>
+<body>
+
+   
+    <div class="container">
+        <h1 id="heading" style="color:blue;" >heading</h1>
+        <p id="para">This is a paragraph</p>
+        <a id="link" href="https://www.facebook.com/">Facebook</a><br><br>
+
+        <button class="btn btn-primary" onclick="changeElements()">click here</button>
+
+    </div>
+    <script>
+        function changeElements(){
+            var x = document.getElementById('heading')
+            var y = document.getElementById('para')
+            var z = document.getElementById('link');
+
+            x.style.backghround="red";
+
+            y.innerHTML ="This paragraph has been updated";
+
+            z.innerHTML = "Youtube"
+            z.href = "https://www.youtube.com/";
+        }
+
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="myDiv">
+        <p id="oldparagraph">This is the old paragraph</p>
+    </div>
+    <button onclick="replacement()">Replace Paragraph</button>
+
+    <script>
+        function replaceElement() {
+            let parentDiv = documnet.getElementById("myDiv");
+            let oldparagraph = documnet.getElementById("oldparagraph");
+            let newParagraph= documnet.getElementById("p");
+            newParagraph.textContent = "This is the new paragraph.";
+            parentDiv.replaceChild(newParagraph, oldparagraph);
+
+
+        }
+    </script>
+</body>
+</html>

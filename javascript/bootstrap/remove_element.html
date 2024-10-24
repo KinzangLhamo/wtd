@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>remove_ele</title>
+</head>
+<body>
+    <div>
+        <p id="para1">This Paragraph will be deleted.</p>
+        <p id=" para2">This Paragraph will be alsodeleted.</p>
+       
+    </div>
+    <button onclick="deleteElements()">Delete paragraph</button>
+
+    <script>
+        function deleteElements() {
+            //find the paragraph and
+            //remove the paragraph element from the DOM
+            let paragraph1 = document.getElementById('para1');
+            paragraph1.remove();
+
+            //find the parent element (inthis case, the div)
+            let parentDiv = document.getElementById("myDiv");
+            //find the child element(the paragraph to be deleted)
+            let paragraph2 = document.getElementById("para2");
+
+            parentDiv.removeChild
+
+        }
+    </script>
+</body>
+</html>

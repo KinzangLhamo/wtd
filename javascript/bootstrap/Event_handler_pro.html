@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="myButton">Click Me</button>
+    <button id="myMouse">Move the mouse here</button>
+<input type="text" id="username">
+<input type="text" id="nickname">
+    <script>
+        document.getElementById('myButton').onclick = function() {
+            alert('First event listener!');
+
+        };
+
+        document.getElementById('myMouse').onmousemove = function() {
+            this.style.fontStyle="italic";
+            this.style.color="red";
+            
+
+
+
+        }; 
+        
+        document.getElementById('username').onkeydown = function(){
+            this.style.backgroundColor='red';
+            
+        };
+
+        
+        document.getElementById('nickname').onfocus = function(){
+            this.style.backgroundColor='purple';
+        };
+
+        document.getElementById('myButton').onclick = function() {
+            alert('Button clicked again');
+
+        };
+
+
+       
+
+
+
+       
+    </script>
+   
+</body>
+</html>

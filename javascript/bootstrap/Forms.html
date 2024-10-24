@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+    <form class="row g-3"></form>
+    <div class="col-12">
+        <label for="Username" class="form-label">Address</label>
+        <input type="text" class="form-label" id="Username" >
+    </div>
+    <div class="col-md-6">
+        <label for="inputEmail4" class="form-label">Email</label>
+        <input type="email" class="form-label" id="inputEmail4">
+      </div>
+      <div class="col-md-6">
+        <label for="inputPassword4" class="form-label">Password</label>
+        <input type="password" class="form-label" id="inputPassword4">
+      </div>
+      <div class="col-12">
+        <label for="Age" class="form-label">Age</label>
+        <input type="text" class="form-label" id="Age" >
+      </div><br>
+
+
+      <fieldset class="row mb-3">
+        <legend class="col-md-6">Choose your gender</legend>
+        <div class="col-sm-3">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+            <label class="form-check-label" for="gridRadios1">
+             Male
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+            <label class="form-check-label" for="gridRadios2">
+             Female
+            </label>
+          </div>
+         
+          
+        </div>
+      </fieldset>
+      <div class="col-12">
+        <label class="visually-hidden" for="inlineFormSelectPref">Preference</label>
+        <select class="form-select" id="inlineFormSelectPref">
+          <option selected>Choose your program</option>
+          <option value="1">DMA</option>
+          <option value="2">DCSN</option>
+          <option value="3">DCE</option>
+        </select>
+      </div><br>
+      <div class="col-auto">
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+
+    
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/bootstrap.bundle.js"></script>
+</body>
+</html>

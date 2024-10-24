@@ -1,0 +1,202 @@
+<!-- 
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Management Dashboard</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #1e1e1e;
+      color: #f4f4f4;
+    }
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 180px;
+      height: 100%;
+      background-color: #333;
+      padding: 20px;
+      box-shadow: 3px 0 5px rgba(0, 0, 0, 0.5);
+    } 
+    .sidebar h2 {
+      color: #fff;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .nav-item {
+      display: flex;
+      align-items: center;
+      padding: 15px;
+      margin-bottom: 10px;
+      cursor: pointer;
+      background-color: #444;
+      border-radius: 5px;
+    }
+    .nav-item span {
+      font-size: 24px;
+      margin-right: 10px;
+    }
+    .nav-item p {
+      margin: 0;
+    }
+    .nav-item:hover {
+      background-color: #555;
+    }
+    .main-content {
+      margin-left: 250px;
+      padding: 20px;
+    }
+    .content-box {
+      background-color: #292929;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.7);
+    }
+    h1 {
+      font-size: 2rem;
+      color: #007bff;
+    }
+    .btn-Back {
+      padding: 10px 20px;
+      margin-top: 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .btn-Back:hover {
+      background-color: #0056b3;
+    }
+    select, button {
+      width: 100%;
+      padding: 15px;
+      margin: 10px 0;
+      background-color: #444;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+    }
+    button {
+      background-color: #007bff;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    table {
+      width: 100%;
+      margin-top: 20px;
+      color: #fff;
+      border-collapse: collapse;
+    }
+    th, td {
+      padding: 10px;
+      text-align: left;
+      border: 1px solid #444;
+    }
+    th {
+      background-color: #007bff;
+    }
+    td input {
+      width: 100%;
+      padding: 10px;
+      background-color: #333;
+      border: none;
+      color: #fff;
+    }
+    .delete-btn {
+      padding: 10px 15px;
+      background-color: #dc3545;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .delete-btn:hover {
+      background-color: #c82333;
+    }
+  </style>
+</head>
+<body>
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <h2>Management Dashboard</h2>
+    <div class="nav-item" onclick="loadEmployeePage()">
+      <span>&#128188;</span>
+      <p>Employees</p>
+    </div>
+  </div>
+
+  <!-- Main Content Area -->
+  <div class="main-content">
+    <div id="content-display" class="content-box">
+      <h1>Welcome to the Management Dashboard</h1>
+      <p>Select the "Employees" option from the sidebar to proceed.</p>
+      <button class="btn-Back" onclick="window.location.href='home2.html';">Back</button>
+    </div>
+  </div>
+
+  <script>
+    function loadEmployeePage() {
+      document.getElementById('content-display').innerHTML = `
+        <h1>Select a Department</h1>
+        <select id="departmentSelect">
+          <option value="">-- Select Department --</option>
+          <option value="HR">Human Resources</option>
+          <option value="FIN">Finance</option>
+          <option value="ENG">Engineering</option>
+        </select>
+        <button onclick="loadEmployeeManagementPage()">Proceed</button>
+      `;
+    }
+
+    function loadEmployeeManagementPage() {
+      const department = document.getElementById('departmentSelect').value;
+      if (department !== '') {
+        document.getElementById('content-display').innerHTML = `
+          <h1>Manage Employees for ${department} Department</h1>
+          <table>
+            <thead>
+              <tr>
+                <th>Employee Name</th>
+                <th>Position</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody id="employeeTable">
+              <tr>
+                <td><input type="text" placeholder="Enter name"></td>
+                <td><input type="text" placeholder="Enter position"></td>
+                <td><button class="delete-btn" onclick="deleteRow(this)">Delete</button></td>
+              </tr>
+            </tbody>
+          </table>
+          <button onclick="addEmployee()">Add Employee</button>
+        `;
+      } else {
+        alert('Please select a department!');
+      }
+    }
+
+    function addEmployee() {
+      const table = document.getElementById('employeeTable');
+      const newRow = table.insertRow();
+      newRow.innerHTML = `
+        <td><input type="text" placeholder="Enter name"></td>
+        <td><input type="text" placeholder="Enter position"></td>
+        <td><button class="delete-btn" onclick="deleteRow(this)">Delete</button></td>
+      `;
+    }
+
+    function deleteRow(btn) {
+      const row = btn.parentNode.parentNode;
+      row.parentNode.removeChild(row);
+    }
+  </script>
+</body>
+</html>
